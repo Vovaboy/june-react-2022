@@ -1,5 +1,5 @@
-import './App.css';
-import Users from "./components/users/Users";
+
+import Characters from "./components/characters/Characters";
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
 
   return (<div>
     <h2>app component header</h2>
-    <Users/>
+    <Characters/>
 
   </div>);
 }
