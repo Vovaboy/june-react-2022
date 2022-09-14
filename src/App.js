@@ -1,5 +1,5 @@
 
-import Characters from "./components/characters/Characters";
+import Heroes from "./components/hero/Heroes";
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
 
   return (<div>
     <h2>app component header</h2>
-    <Characters/>
+    <Heroes/>
 
   </div>);
 }
