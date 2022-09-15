@@ -1,19 +1,24 @@
-import {useSteat, useEffect} from 'react'
-import {Hero} from './Hero'
+import {useState} from 'react'
+import Heroe from "./Hero"
 
-const Heroes = () => {
-    const [characters, setCharacters] = useSteat([])
-    useEffect(() => {
-        fetch('https://rickandmortyapi.com/api/character')
-            .then(value => value.json())
-            .then((data) => setCharacters(data.results))
+function Heroes() {
 
+    const [characters, setCharacters] = useState([]);
 
-    }, [])
+    fetch(`https://rickandmortyapi.com/api/character`)
+        .then(value => value.json())
+        .then(value => {
+            setCharacters(value.results);
+        });
+
     return (
         <div>
-            {characters.map(caracters => <Hero key={caracters.id} characters={caracters}/>)}
+            {
+                characters.map(character => <Heroe key={character.id} character={character} r={character}/>)
+            }
         </div>
-    )
+    );
 }
-export {Heroes};
+
+
+export default Heroes;

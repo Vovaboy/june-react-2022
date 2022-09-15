@@ -1,19 +1,19 @@
-const Hero = ({characters}) => {
-    const {name, status, species,gender,image,lpcation} = characters;
-
+function Hero(props) {
+    const {character} = props;
     return(
         <div>
-            <div>
-                Name: {name}
-                Status: {status}
-                Species: {species}
-                Gender: {gender}
-                Location:{lpcation}
-                image: {<img src={image} alt=""/>}
-            </div>
+            Id: {character.id}<br/>
+            Name: {character.name}<br/>
+            Status:  {character.status}<br/>
+            Species {character.species}<br/>
+            Gender: {character.gender}<br/>
+            {<img src={character.image} alt=""/>}
+
+
+
+
         </div>
     )
-
 }
 
-export {Hero}
+export default Hero
