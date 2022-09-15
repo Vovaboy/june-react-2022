@@ -14,7 +14,7 @@ function Heroes() {
     return (
         <div>
             {
-                characters.map(character => <Heroe key={character.id} character={character} r={character}/>)
+                characters.map(character => <Heroe key={character.id} character={character} />)
             }
         </div>
     );
