@@ -2,13 +2,9 @@ function Hero(props) {
     const {character} = props;
     return(
         <div>
-            Id: {character.id}<br/>
-            Name: {character.name}<br/>
-            Status:  {character.status}<br/>
-            Species {character.species}<br/>
-            Gender: {character.gender}<br/>
-            {<img src={character.image} alt=""/>}
-
+           Mision: {character.mission_name}<br/>
+            Launch year: {character.launch_year}<br/>
+            {<img src={character.links.mission_patch_small} alt=""/>}
 
 
 

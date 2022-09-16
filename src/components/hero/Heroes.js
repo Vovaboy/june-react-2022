@@ -5,10 +5,11 @@ function Heroes() {
 
     const [characters, setCharacters] = useState([]);
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character`)
+        fetch(`https://api.spacexdata.com/v3/launches/`)
             .then(value => value.json())
             .then(value => {
-                setCharacters(value.results);
+                let newArrSpaseX = value.filter(search => search.launch_year < 2020)
+                setCharacters(newArrSpaseX)
             });
     })
 
