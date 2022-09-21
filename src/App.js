@@ -1,11 +1,11 @@
 import {Cars} from "./components";
 
 const App = () => {
-  return(
-      <div>
-        <Cars/>
-      </div>
-  );
+    return (
+        <div>
+            <Cars/>
+        </div>
+    );
 };
 
-export {App}
+export {App};
