@@ -1,24 +1,21 @@
-import {useState,useEffect} from "react"
+import {useEffect, useState} from "react";
 
-import {CarForm} from "../CarForm/CarForm"
-import {carService} from "../../services"
-import {Car} from '../Car/Car'
+import {CarForm} from "../CarForm/CarForm";
+import {carService} from "../../services";
+import {Car} from "../Car/Car";
 
 const Cars = () => {
     const [cars, setCars] = useState([]);
 
-    useEffect(() =>{
+    useEffect(() => {
         carService.getAll().then(({data})=>setCars(data))
-
     }, [])
-
 
     return (
         <div>
-            <CarForm/>
+            <CarForm setCars={setCars}/>
             <hr/>
-            {cars.map(car => <Car key={car.id} car={car} setCars={setCars}/>)}
-
+            {cars.map(car=><Car key={car.id} car={car} setCars={setCars}/>)}
         </div>
     );
 };
