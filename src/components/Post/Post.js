@@ -6,4 +6,4 @@ const Post = () => {
     );
 };
 
-export {Post}
+export {Post};
